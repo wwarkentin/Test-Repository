@@ -1,40 +1,23 @@
-# Used Phone Data Analysis
+# Simple Python Calculator
 
-## Overview
-This project analyzes a dataset of used and refurbished mobile devices
-using Python.
+print("Simple Calculator")
 
-The analysis was completed as part of GSBA 594.
+num1 = float(input("Enter the first number: "))
+operator = input("Enter an operator (+, -, *, /): ")
+num2 = float(input("Enter the second number: "))
 
-## Dataset
-The dataset contains information about used mobile devices, including:
+if operator == "+":
+    result = num1 + num2
+elif operator == "-":
+    result = num1 - num2
+elif operator == "*":
+    result = num1 * num2
+elif operator == "/":
+    if num2 != 0:
+        result = num1 / num2
+    else:
+        result = "Error: Cannot divide by zero."
+else:
+    result = "Error: Invalid operator."
 
-- Device brand
-- Operating system
-- Screen size
-- 4G and 5G capability
-- Camera resolution
-- Internal memory
-- RAM
-- Battery capacity
-- Device weight
-- Release year
-- Days used
-- New device price
-- Used device price
-
-## Tools Used
-- Python
-- Jupyter Notebook
-- Pandas
-- NumPy
-- Matplotlib
-
-## Files
-- `Data Analysis Assignment Used Phones.ipynb` - Jupyter Notebook containing the analysis
-- `used_device_data.csv` - Dataset used for the analysis
-
-## Author
-BWarUSMC
-MBA Candidate
-University of San Diego
+print("Result:", result)
